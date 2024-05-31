@@ -7,7 +7,7 @@
 
 This project implements a drone obstacle avoidance system using AirSim and the Deep Deterministic Policy Gradient (DDPG) algorithm. The goal is to train a drone to navigate through an environment while avoiding obstacles in real-time.
 
-## Pacakges Used
+## Packages Used
 - stable-baselines3 v1.7.0 (pip install stable-baselines3[extra]==1.7.0)
 - airsim v1.8.1
 - gym 0.21.0
@@ -66,8 +66,16 @@ tensorboard --logdir=/tmp/name_of_folder
 
 3. Evaluation starts and you can see the output in the airsim window. After evaluation is done, we can see the metrics which show up in a matplotlib window and also is saved in the root directory.
 
+## Results 
+The results qualitative and qunatitative can be seen in the report.pdf uploaded in the root of this repo.
+
+- [This](https://drive.google.com/file/d/1gPdVm2av3VIhiCLBXUXSsuhMHWSw8Inm/view) shows the results of Lidar-Only implmenation. It can be seen that that the drone in many episodes narrowly escapes the thin wooden pole and tree.
+
+-  [This](https://drive.google.com/file/d/1j-nWJp9L4KhxkSSD0dr1X8fKn50GRUE6/view) shows the results of Lidar+Depth Camera Implementation. This shows showcases many instances when the drone actively tries to change its path to avoid obstacles.
+
 ## Bugs
 - If the code does not connect to the simulator, please change the port in settings.json under ApiServerPort as well as on the code , in the files drone_env_ddpg.py and ddpg_lidar.py in line number 19 for both eval and the normal files.
+
 ## Acknowledgements
 
 - [AirSim](https://microsoft.github.io/AirSim/) - Open-source simulator for drones and cars developed by Microsoft.
